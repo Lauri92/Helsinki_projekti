@@ -1,14 +1,15 @@
 #kartta {
     margin-top: 1em;
-    margin-left: 1em;
-    width: 848px;
-    height: 500px;
+    margin-left: 7em;
+    margin-right: 7em;
+    width: 90%;
+    height: 60em;
     margin-bottom: 1em;
-    float: left;
+    position: relative;
 }
 
 #teksti {
-    margin-left: 1em;
+    margin-left: 6.4em;
 }
 
 html {
@@ -16,7 +17,8 @@ html {
 }
 
 body {
-
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .karttanappi {
@@ -26,15 +28,16 @@ body {
 
 .infodiv {
     width: 1400px;
-    /*border: 4px solid greenyellow;*/
+    border: 4px solid greenyellow;
     padding: 20px;
     overflow: hidden;
     margin-bottom: 1em;
+    margin-left: 1.4em;
 }
 
 #paaotsikko {
-    margin-top: 1em;
-    margin-bottom: 0em;
+    margin-top: 1.3em;
+    margin-bottom: 0.3em;
     margin-left: 0.3em;
     font-weight: bold;
     font-size: 50px;
@@ -83,6 +86,7 @@ body {
 .navbar a {
     float: left;
     display: block;
+    border-right: 1px solid #FFF;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
@@ -105,15 +109,20 @@ input {
     padding: 12px 20px;
 }
 
+button {
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
 #nappi {
-    background-color: white;
+    background-color: #c4c4fe;
     color: black;
     border: 4px solid blue;
     border-radius: 12px;
     padding: 10px 24px;
 }
 #nappi2 {
-    background-color: white;
+    background-color: #ffc4c4;
     color: black;
     border: 4px solid red;
     border-radius: 12px;
@@ -121,7 +130,7 @@ input {
 }
 
 #nappi3 {
-    background-color: white;
+    background-color: #c4fdc4;
     color: black;
     border: 4px solid #4CAF50;
     border-radius: 12px;

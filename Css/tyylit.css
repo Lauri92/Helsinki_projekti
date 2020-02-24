@@ -6,10 +6,14 @@
     height: 60em;
     margin-bottom: 1em;
     position: relative;
+    border-radius: 25px;
+    border: 4px solid black;
+    z-index: 0;
 }
 
 #teksti {
     margin-left: 6.4em;
+    width: 20em;
 }
 
 html {
@@ -19,6 +23,8 @@ html {
 body {
     margin-left: 0;
     margin-right: 0;
+    background-image: url("../Pictures/helsinki-cathedral-4189824_1920.jpg");
+    background-attachment: fixed;
 }
 
 .karttanappi {
@@ -28,20 +34,28 @@ body {
 
 .infodiv {
     width: 1400px;
-    border: 4px solid greenyellow;
+    border: 4px solid black;
+    border-radius: 25px;
     padding: 20px;
     overflow: hidden;
-    margin-bottom: 1em;
+    margin-top: 1.4em;
     margin-left: 1.4em;
+    background-color: #FFFFEE;
+}
+
+.infodiv:not(:last-child) {
+    margin-bottom: 1.4em;
 }
 
 #paaotsikko {
-    margin-top: 1.3em;
+    margin-top: 0;
     margin-bottom: 0.3em;
     margin-left: 0.3em;
+    padding-top: 1.3em;
     font-weight: bold;
     font-size: 50px;
     font-style: italic;
+    text-shadow: 1px 1px 2px #FFFFFF;
 }
 
 .nimi {
@@ -71,12 +85,14 @@ body {
 .tulokset {
     margin-left: 0.5em;
     font-size: 35px;
+    text-shadow: 1px 1px 2px #FFFFFF;
 }
 
 /* The navigation bar */
 .navbar {
     overflow: hidden;
     background-color: #333;
+    z-index: 2;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
@@ -112,29 +128,43 @@ input {
 button {
     margin-left: 0.2em;
     margin-right: 0.2em;
+    border-radius: 12px;
+    padding: 10px 24px;
 }
 
 #nappi {
     background-color: #c4c4fe;
     color: black;
     border: 4px solid blue;
-    border-radius: 12px;
-    padding: 10px 24px;
 }
 #nappi2 {
     background-color: #ffc4c4;
     color: black;
     border: 4px solid red;
-    border-radius: 12px;
-    padding: 10px 24px;
 }
 
 #nappi3 {
     background-color: #c4fdc4;
     color: black;
     border: 4px solid #4CAF50;
-    border-radius: 12px;
-    padding: 10px 24px;
+}
+
+#nappi4 {
+    background-color: #c4fdc4;
+    color: black;
+    border: 4px solid #e0e000;
+}
+
+#nappi5 {
+    background-color: #c4fdc4;
+    color: black;
+    border: 4px solid #4CAF50;
+}
+
+#nappi6 {
+    background-color: #CCCCCC;
+    color: black;
+    border: 4px solid #444444;
 }
 
 #kirkko {
@@ -144,6 +174,11 @@ button {
     height: 500px;
     margin-bottom: 1em;
     float: right;
+}
+
+hr {
+    height: 2.2px;
+    background-color: black;
 }
 
 iframe {

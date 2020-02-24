@@ -24,8 +24,8 @@ const nappi4 = document.getElementById('nappi4');
 nappi4.addEventListener('click', clearaus);
 const nappi5 = document.getElementById('nappi5');
 nappi5.addEventListener('click', kayttajanPaikannus);
-//const nappi6 = document.getElementById('nappi6');
-//nappi6.addEventListener('click', navigointi);
+const nappi6 = document.getElementById('nappi6');
+nappi6.addEventListener('click', navigointi);
 
 let kayttajanLat;
 let kayttajanLon;
@@ -248,7 +248,8 @@ function etsiAktiviteetit(evt) {
           let image = document.createElement('img');
           image.className = 'kuva';
           image.setAttribute('src', vastaus.data[i].description.images[j].url);
-          body.appendChild(image);
+          div.appendChild(image);
+          body.appendChild(div);
         }
 
       }

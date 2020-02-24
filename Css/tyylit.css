@@ -1,0 +1,147 @@
+#kartta {
+    margin-top: 1em;
+    margin-left: 1em;
+    width: 848px;
+    height: 500px;
+    margin-bottom: 1em;
+    float: left;
+}
+
+#teksti {
+    margin-left: 1em;
+}
+
+html {
+    background-color: white;
+}
+
+body {
+
+}
+
+.karttanappi {
+
+
+}
+
+.infodiv {
+    width: 1400px;
+    /*border: 4px solid greenyellow;*/
+    padding: 20px;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+#paaotsikko {
+    margin-top: 1em;
+    margin-bottom: 0em;
+    margin-left: 0.3em;
+    font-weight: bold;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.nimi {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 22px;
+}
+
+.osoite {
+}
+
+.selostus {
+    font-style: italic;
+
+}
+
+.kuva {
+    width: 20%;
+    height: 20%;
+    margin-left: 1em;
+    margin-right: 2em;
+    margin-bottom: 1em;
+    float: left;
+    box-shadow: 10px 10px 10px black;
+}
+
+.tulokset {
+    margin-left: 0.5em;
+    font-size: 35px;
+}
+
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+.active-page {
+    background-color: blue;
+}
+
+input {
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 12px 20px;
+}
+
+#nappi {
+    background-color: white;
+    color: black;
+    border: 4px solid blue;
+    border-radius: 12px;
+    padding: 10px 24px;
+}
+#nappi2 {
+    background-color: white;
+    color: black;
+    border: 4px solid red;
+    border-radius: 12px;
+    padding: 10px 24px;
+}
+
+#nappi3 {
+    background-color: white;
+    color: black;
+    border: 4px solid #4CAF50;
+    border-radius: 12px;
+    padding: 10px 24px;
+}
+
+#kirkko {
+    margin-top: 1em;
+    margin-left: 1em;
+    width: 625px;
+    height: 500px;
+    margin-bottom: 1em;
+    float: right;
+}
+
+iframe {
+    margin-top: 3em;
+    width: 848px;
+    height: 500px;
+}
+
+
+

@@ -1,5 +1,6 @@
 'use strict';
 
+
 const apiUrl3 = 'https://cors-anywhere.herokuapp.com/http://open-api.myhelsinki.fi/v1/events/?tags_search=';
 
 const nappi3 = document.getElementById('nappi3');
@@ -31,6 +32,8 @@ function etsiEventit(evt) {
     if (vastaus.data.length > 0) {
       const body = document.querySelector('body');
       const osumat = document.createElement('p');
+      const c = document.createElement("hr");
+      body.appendChild(c);
       osumat.className = 'tulokset';
       osumat.innerHTML = 'Hakusanalla löytyi ' + vastaus.meta.count +
           ' tapahtumaa.';
@@ -72,7 +75,7 @@ function etsiEventit(evt) {
                 lat + ' ' + lon,
             );
 
-        div.className = 'infodiv';
+        div.className = 'infodiv3';
 
         nimi.innerHTML = vastaus.data[i].name.fi;
         nimi.className = 'nimi';
@@ -119,7 +122,12 @@ function etsiEventit(evt) {
           div.appendChild(image);
           body.appendChild(div);
         }
-
+        const c = document.createElement("hr");
+        if(i == vastaus.data.length - 1) {}
+        else {
+          const b = document.createElement("hr");
+          document.getElementsByTagName("body")[0].appendChild(b);
+        }
       }
     } else {
       const eiTuloksia = document.createElement('p');

@@ -31,6 +31,8 @@ function etsiEventit(evt) {
     if (vastaus.data.length > 0) {
       const body = document.querySelector('body');
       const osumat = document.createElement('p');
+      const b = document.createElement("hr");
+      body.appendChild(b);
       osumat.className = 'tulokset';
       osumat.innerHTML = 'Hakusanalla löytyi ' + vastaus.meta.count +
           ' paikkaa.';
@@ -73,7 +75,7 @@ function etsiEventit(evt) {
                 lat + ' ' + lon,
             );
 
-        div.className = 'infodiv';
+        div.className = 'infodiv2';
 
         nimi.innerHTML = vastaus.data[i].name.fi;
         nimi.className = 'nimi';
@@ -121,7 +123,11 @@ function etsiEventit(evt) {
           div.appendChild(image);
           body.appendChild(div);
         }
-
+        if(i == vastaus.data.length - 1) {}
+        else {
+          const b = document.createElement("hr");
+          document.getElementsByTagName("body")[0].appendChild(b);
+        }
       }
     } else {
       const eiTuloksia = document.createElement('p');

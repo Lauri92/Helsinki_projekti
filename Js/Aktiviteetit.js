@@ -1,6 +1,5 @@
 'use strict';
-const b = document.createElement("hr");
-document.getElementsByTagName("body")[0].appendChild(b);
+
 
 const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors ';
@@ -143,6 +142,8 @@ function etsiAktiviteetit(evt) {
     if (vastaus.data.length > 0) {
       const body = document.querySelector('body');
       const osumat = document.createElement('p');
+      const a = document.createElement("hr");
+      body.appendChild(a);
       osumat.className = 'tulokset';
       osumat.innerHTML = 'Hakusanalla löytyi ' + vastaus.meta.count +
           ' aktiviteettia.';
@@ -254,8 +255,11 @@ function etsiAktiviteetit(evt) {
           body.appendChild(div);
         }
         // add stuff
-        const b = document.createElement("hr");
-        document.getElementsByTagName("body")[0].appendChild(b);
+        if(i == vastaus.data.length - 1) {}
+        else {
+          const b = document.createElement("hr");
+          document.getElementsByTagName("body")[0].appendChild(b);
+        }
       }
     } else {
       const eiTuloksia = document.createElement('p');

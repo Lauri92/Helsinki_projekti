@@ -28,24 +28,32 @@
     <a href="">Dos and don'ts?</a>
     <a href="">Basic Phrases?</a>
     <a href="">Restaurants...?</a>
+    <a id="english" style="float: right;"></a>
+    <a id="finnish" style="float: right; border-left: 1px solid #FFF;"></a>
 </div>
 
 <div id="overlay">
-    <h2 class="overtext">Hakukoneen käyttöohjeet</h2>
-    <p class="overtext">Kirjoita hakulaatikkoon etsimäsi aihe esim. Beer ja klikkaa etsimääsi aiheeseen liittyvää nappia
-        (aktiviteetti / paikka / tapahtuma). Kirjoita hakulaatikkoon etsimäsi aihe esim. Beer ja klikkaa etsimääsi aiheeseen liittyvää nappiaKirjoita hakulaatikkoon etsimäsi aihe esim. Beer ja klikkaa etsimääsi aiheeseen liittyvää nappiaKirjoita hakulaatikkoon etsimäsi aihe esim. Beer ja klikkaa etsimääsi aiheeseen liittyvää nappia</p>
+    <button id="putton"></button>
+    <h2 class="overH2">Hakukoneen käyttöohjeet (Paina hiirellä poistuaksesi overlaysta)</h2>
+    <ul>
+        <li class="overtext">Etsi alhaalla olevista listoista "tagi" joka sopii etsimääsi aiheeseen (Esim. "beer" tai "animals")</li>
+        <li class="overtext">Paina etsimäsi aiheeseen littyvää oikeaa nappulaa (Hae aktiviteettia/paikkaa/tapahtumaa)</li>
+        <li class="overtext">Hakukone hakee aiheeseesi liittyviä kohteita ja tulostaa sijainnnit kartalla, sekä tulostaa tietoa kartan alapuolelle</li>
+        <li class="overtext">Tyhjennä kartta-nappula nollaa kaikki haut ja tyhjentää kartan markkereista</li>
+        <li class="overtext">Paikanna minut-nappula näyttää sijantisi kartalla</li>
+    </ul>
     <div class="row">
         <div class="column"; id="column">
-            <h2 class="overtext">Column 1</h2>
-            <p class="overtext">Some text..</p>
+            <h2 class="columnH2overtext">Aktiviteetit</h2>
+            <p class="columnPovertext">Some text..</p>
         </div>
         <div class="column"; id="column2">
-            <h2 class="overtext">Column 2</h2>
-            <p class="overtext">Some text..</p>
+            <h2 class="columnH2overtext">Paikat</h2>
+            <p class="columnPovertext">Some text..</p>
         </div>
         <div class="column"; id="column3">
-            <h2 class="overtext">Column 3</h2>
-            <p class="overtext">Some text..</p>
+            <h2 class="columnH2overtext">Tapahtumat</h2>
+            <p class="columnPovertext">Some text..</p>
         </div>
     </div>
 </div>
@@ -64,7 +72,8 @@
 <script src="../Js/Aktiviteetit.js"></script>
 <script src="../Js/Paikat.js"></script>
 <script src="../Js/Eventit.js"></script>
-<script src="../Js/Overlay_ohjeet.js"></script>
+<script src="../Js/Overlay.js"></script>
+<script src="../Js/Aktiviteetit_translate.js"></script>
 </div>
 </body>
 </html>

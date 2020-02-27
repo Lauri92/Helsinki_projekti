@@ -1,14 +1,16 @@
 'use strict';
 
 function on() {
-    document.getElementById("overlay").style.display = "block";
+    overlay.style.display = "block";
     body.className = "overlay_hidden";
 }
 
 function off() {
-    document.getElementById("overlay").style.display = "none";
+    overlay.style.display = "none";
     body.className = "overlay_show";
 }
+
+
 
 function infocreate() {
 

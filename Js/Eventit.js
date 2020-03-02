@@ -116,7 +116,8 @@ function etsiEventit(evt) {
           let image = document.createElement('img');
           image.className = 'kuva';
           image.setAttribute('src', vastaus.data[i].description.images[j].url);
-          body.appendChild(image);
+          div.appendChild(image);
+          body.appendChild(div);
         }
 
       }

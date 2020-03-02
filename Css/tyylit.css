@@ -1,14 +1,19 @@
 #kartta {
     margin-top: 1em;
-    margin-left: 1em;
-    width: 848px;
-    height: 500px;
-    margin-bottom: 1em;
-    float: left;
+    margin-left: 7em;
+    margin-right: 7em;
+    width: 90%;
+    height: 60em;
+    margin-bottom: 3em;
+    position: relative;
+    border-radius: 25px;
+    border: 6px solid black;
+    z-index: 0;
 }
 
 #teksti {
-    margin-left: 1em;
+    margin-left: 6.4em;
+    width: 20em;
 }
 
 html {
@@ -16,7 +21,13 @@ html {
 }
 
 body {
-
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-bottom: 1em;
+    background-image: url("../Pictures/helsinki-cathedral-4189824_1920.jpg");
+    background-attachment: fixed;
+    background-size:cover;
 }
 
 .karttanappi {
@@ -26,25 +37,83 @@ body {
 
 .infodiv {
     width: 1400px;
-    border: 4px solid greenyellow;
+    border: 4px solid black;
+    border-radius: 25px;
     padding: 20px;
     overflow: hidden;
-    margin-bottom: 1em;
+    margin-top: 1.4em;
+    margin-left: 1.4em;
+    background-image: url("../Pictures/blue-blurred-background.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.infodiv2 {
+    width: 1400px;
+    border: 4px solid black;
+    border-radius: 25px;
+    padding: 20px;
+    overflow: hidden;
+    margin-top: 1.4em;
+    margin-left: 1.4em;
+    background-image: url("../Pictures/red-blurred-background.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.infodiv3 {
+    width: 1400px;
+    border: 4px solid black;
+    border-radius: 25px;
+    padding: 20px;
+    overflow: hidden;
+    margin-top: 1.4em;
+    margin-left: 1.4em;
+    background-image: url("../Pictures/green-blurred-background.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.infodiv:not(:last-child) {
+    margin-bottom: 1.4em;
+}
+
+.infodiv2:not(:last-child) {
+    margin-bottom: 1.4em;
+}
+
+.infodiv3:not(:last-child) {
+    margin-bottom: 1.4em;
 }
 
 #paaotsikko {
-    margin-top: 1em;
-    margin-bottom: 0em;
-    margin-left: 0.3em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.3em;
+    padding-left: 0.7em;
+    padding-top: 1.3em;
     font-weight: bold;
     font-size: 50px;
     font-style: italic;
+    letter-spacing: 2px;
+    /*border: 2px solid black;*/
+    color: black;
 }
 
 .nimi {
     font-weight: bold;
     text-decoration: underline;
     font-size: 22px;
+    margin-top: 0.3em;
 }
 
 .osoite {
@@ -52,6 +121,7 @@ body {
 
 .selostus {
     font-style: italic;
+    font-size: 20px;
 
 }
 
@@ -67,13 +137,16 @@ body {
 
 .tulokset {
     margin-left: 0.5em;
-    font-size: 35px;
+    font-size: 45px;
+    letter-spacing: 2px;
+    color: black;
 }
 
 /* The navigation bar */
 .navbar {
     overflow: hidden;
     background-color: #333;
+    z-index: 2;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
@@ -83,10 +156,12 @@ body {
 .navbar a {
     float: left;
     display: block;
+    border-right: 1px solid #FFF;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 16px;
     text-decoration: none;
+    font-size: 20px;
 }
 
 /* Change background on mouse-over */
@@ -99,33 +174,80 @@ body {
     background-color: blue;
 }
 
+#finnish {
+    width: 33px;
+    height: 23px;
+    background-image: url("../Pictures/1920px-Flag_of_Finland.svg.png");
+    background-size: cover;
+}
+
+#english {
+    width: 33px;
+    height: 23px;
+    border: none;
+    background-image: url("../Pictures/1920px-Flag_of_the_United_States.svg.png");
+    background-size: cover;
+}
+
 input {
     border: 2px solid black;
     border-radius: 4px;
     padding: 12px 20px;
 }
 
-#nappi {
-    background-color: white;
-    color: black;
-    border: 4px solid blue;
-    border-radius: 12px;
-    padding: 10px 24px;
-}
-#nappi2 {
-    background-color: white;
-    color: black;
-    border: 4px solid red;
+button {
+    margin-left: 0.2em;
+    margin-right: 0.2em;
     border-radius: 12px;
     padding: 10px 24px;
 }
 
-#nappi3 {
-    background-color: white;
+#nappi {
+    background-color: #c4c4fe;
     color: black;
-    border: 4px solid #4CAF50;
-    border-radius: 12px;
-    padding: 10px 24px;
+    border: 4px solid blue;
+    font-size: 0.9em;
+}
+#nappi2 {
+    background-color: #ffc4c4;
+    color: black;
+    border: 4px solid red;
+    font-size: 0.9em;
+}
+
+#nappi3 {
+    background-color: #c4fdc4;
+    color: black;
+    border: 4px solid #009e00;
+    font-size: 0.9em;
+}
+
+#nappi4 {
+    background-color: #CCCCCC;
+    color: black;
+    border: 4px solid #444444;
+    font-size: 0.9em;
+}
+
+#nappi5 {
+    background-color: #ffb6ff;
+    color: black;
+    border: 4px solid #ff2fff;
+    font-size: 0.9em;
+}
+
+#nappi6 {
+    background-color: #ffffaf;
+    color: black;
+    border: 4px solid #f0f000;
+    font-size: 0.9em;
+}
+
+#nappi7 {
+    background-color: #FFFFFF;
+    color: black;
+    border: 4px solid #777777;
+    font-size: 0.9em;
 }
 
 #kirkko {
@@ -135,6 +257,135 @@ input {
     height: 500px;
     margin-bottom: 1em;
     float: right;
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    overflow: auto;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-left: 1em;
+    background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+.overlay_hidden {
+    overflow: hidden;
+}
+
+.overlay_show {
+    overflow: auto;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 30%;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-radius: 25px;
+    border: 4px solid darkslategray;
+}
+
+.column:first-of-type {
+    margin-left: 1.5em;
+}
+
+#column {
+    background-image: url("../Pictures/blue-blurred-background.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#column2 {
+    background-image: url("../Pictures/red-blurred-background.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#column3 {
+    float: left;
+    width: 30%;
+    margin-left: 1em;
+    margin-right: 1em;
+    background-image: url("../Pictures/green-blurred-background.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.overH2 {
+    color: white;
+    font-size: 2.6em;
+    padding-right: 1em;
+    margin-bottom: 0;
+    -webkit-text-stroke-width: 0.018em;
+    -webkit-text-stroke-color: black;
+}
+
+.overtext {
+    color: white;
+    font-size: 1.2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    -webkit-text-stroke-width: 0.018em;
+    -webkit-text-stroke-color: black;
+}
+
+.columnH2overtext {
+    color: white;
+    font-size: 2.5em;
+    margin-top: 0.3em;
+    padding-left: 0.5em;
+    padding-right: 1em;
+    -webkit-text-stroke-width: 0.018em;
+    -webkit-text-stroke-color: black;
+}
+
+.columnPovertext {
+    color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+    -webkit-text-stroke-width: 0.018em;
+    -webkit-text-stroke-color: black;
+}
+
+#putton {
+    background-image: url("../Pictures/bird.png");
+    width: 50px;
+    height: 50px;
+    margin-right: 1.8em;
+    margin-top: 1em;
+    position:absolute;
+    top:0; right:0;
+}
+
+hr {
+    height: 2.2px;
+    background-color: #333333;
 }
 
 iframe {

@@ -8,5 +8,7 @@
     <orderEntry type="library" name="emoji" level="application" />
     <orderEntry type="library" name="leaflet" level="application" />
     <orderEntry type="library" name="leaflet-routing-machine" level="application" />
+    <orderEntry type="library" name="leaflet" level="application" />
+    <orderEntry type="library" name="leaflet-routing-machine" level="application" />
   </component>
 </module>

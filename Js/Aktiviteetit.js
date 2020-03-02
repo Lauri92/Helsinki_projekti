@@ -1,10 +1,11 @@
 'use strict';
 
+
 const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors ';
 //const kirkkoattribution = '&copy; <a href="https://pixabay.com/fi/users/tap5a-12431592/">Pixabay</a> contributors ';
 
-const mymap = L.map('kartta').setView([60.1685, 24.93972], 12);
+const mymap = L.map('kartta').setView([60.20315, 24.94034], 12);
 
 const tiles = L.tileLayer(tileUrl, {attribution});
 tiles.addTo(mymap);
@@ -24,8 +25,8 @@ const nappi4 = document.getElementById('nappi4');
 nappi4.addEventListener('click', clearaus);
 const nappi5 = document.getElementById('nappi5');
 nappi5.addEventListener('click', kayttajanPaikannus);
-//const nappi6 = document.getElementById('nappi6');
-//nappi6.addEventListener('click', navigointi);
+const nappi6 = document.getElementById('nappi6');
+nappi6.addEventListener('click', navigointi);
 
 let kayttajanLat;
 let kayttajanLon;
@@ -141,6 +142,8 @@ function etsiAktiviteetit(evt) {
     if (vastaus.data.length > 0) {
       const body = document.querySelector('body');
       const osumat = document.createElement('p');
+      const a = document.createElement("hr");
+      body.appendChild(a);
       osumat.className = 'tulokset';
       osumat.innerHTML = 'Hakusanalla löytyi ' + vastaus.meta.count +
           ' aktiviteettia.';
@@ -248,9 +251,15 @@ function etsiAktiviteetit(evt) {
           let image = document.createElement('img');
           image.className = 'kuva';
           image.setAttribute('src', vastaus.data[i].description.images[j].url);
-          body.appendChild(image);
+          div.appendChild(image);
+          body.appendChild(div);
         }
-
+        // add stuff
+        if(i == vastaus.data.length - 1) {}
+        else {
+          const b = document.createElement("hr");
+          document.getElementsByTagName("body")[0].appendChild(b);
+        }
       }
     } else {
       const eiTuloksia = document.createElement('p');

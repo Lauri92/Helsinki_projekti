@@ -17,11 +17,3 @@ function off() {
     overlay.style.display = "none";
     body.className = "overlay_show";
 }
-
-function infocreate() {
-
-}
-
-function addtags() {
-
-}

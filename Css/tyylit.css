@@ -106,9 +106,7 @@ body {
     font-style: italic;
     letter-spacing: 2px;
     /*border: 2px solid black;*/
-    color: white;
-    -webkit-text-stroke-width: 0.018em;
-    -webkit-text-stroke-color: black;
+    color: black;
 }
 
 .nimi {
@@ -141,9 +139,7 @@ body {
     margin-left: 0.5em;
     font-size: 45px;
     letter-spacing: 2px;
-    color: whitesmoke;
-    -webkit-text-stroke-width: 0.015em;
-    -webkit-text-stroke-color: black;
+    color: black;
 }
 
 /* The navigation bar */

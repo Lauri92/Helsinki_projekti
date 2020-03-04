@@ -53,13 +53,14 @@ body {
 
 .infodiv2 {
     width: 1400px;
-    border: 4px solid black;
-    border-radius: 25px;
+
+    border-radius: 15px;
     padding: 20px;
     overflow: hidden;
     margin-top: 1.4em;
     margin-left: 1.4em;
-    background-image: url("../Pictures/red-blurred-background.jpg");
+    opacity: 77%;
+    background-image: url("../html/kuvat/tausta2.png");
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -70,7 +71,7 @@ body {
 .infodiv3 {
     width: 1400px;
     border: 4px solid black;
-    border-radius: 25px;
+    border-radius: 15px;
     padding: 20px;
     overflow: hidden;
     margin-top: 1.4em;
@@ -343,7 +344,7 @@ button {
     width: 17%;
     margin-left: 0.5em;
     margin-right: 1.35em;
-
+    border-radius: 15px;
 
 
 }
@@ -467,15 +468,19 @@ span {
 }
 
 .kuvalinkki{
-    height: 10em;
-    font-weight: 100;
-    color: #fff;
-    font-size: 200%;
-    padding-top: 4em;
+    widht: 30%;
+    font-weight: 500;
+    color: black;
+    font-family: "Britannic Bold";
+    font-size: 120%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     text-align: center;
-    background-image: url("../html/kuvat/alppiruusupuisto.jpg");
+    opacity: 75%;
+    background-image: url("../html/kuvat/tausta2.png");
+    border-radius: 15px;
 }
-
+/*
 .kuvalinkki2{
     height: 10em;
     font-weight: 100;
@@ -540,3 +545,4 @@ span {
     text-align: center;
     background-image: url("../html/kuvat/helsinki3.jpg");
 }
+*/

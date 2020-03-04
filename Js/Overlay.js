@@ -1,22 +1,22 @@
 'use strict';
 
 //  Start of the script
-
 const body = document.getElementsByTagName("body")[0];
-const nappi7 = document.getElementById("nappi7");
-const exit = document.getElementById("putton");
+const nappi7 = document.getElementById("nappi7");   // Show overlay button in main site
+const exit = document.getElementById("putton"); // Exit button in overlay
+const overlay = document.getElementById("id");
 settags();
-nappi7.addEventListener("click", on);
+nappi7.addEventListener("click", on);   // Setting up the EventListeners for show/hide overlay.
 exit.addEventListener("click", off);
 
-function settags() {
+function settags() {    // Used to fill the tag lists (ul). Tags are manually added in arrays, because the API has
     const akt = ["sauna", "heavy rock", "virtual reality", "painting (visual arts)", "Bars & Nightlife", "national parks",
         "schools (educational institutions)", "food", "lunch", "dinner", "activity", "ecological", "walking tour",
         "culture", "daytrip", "pub", "guidance", "music", "games", "fine arts", "hiking and backpacking", "outdoor recreation",
         "design", "trips", "cycling", "summer, architecture", "art", "sea", "nature", "public transport", "cruise", "winter", "education and training",
         "recreation areas", "bar", "tramways", "photography", "islands", "archipelagoes", "summer", "cottage life", "fishing", "sightseeing", "bus sightseeing",
-        "bike tour", "boat sightseeing", "kayaking", "beer", "tea", "canoeing", "archipelago", "history", "suomenlinna", "sailing"].sort(function(a, b){
-        if (a.toLowerCase() < b.toLowerCase()) return -1;
+        "bike tour", "boat sightseeing", "kayaking", "beer", "tea", "canoeing", "archipelago", "history", "suomenlinna", "sailing"].sort(function(a, b){    // Activities array
+        if (a.toLowerCase() < b.toLowerCase()) return -1;   // Without this, tags that start with capital letter go to the top of the list.
         if (a.toLowerCase() > b.toLowerCase()) return 1;
         return 0;
     });
@@ -45,7 +45,7 @@ function settags() {
         'LiveMusic', 'LGBT', 'Casino', 'BanquetIsland', 'BanquetSeaside', 'ShoppingCentre', 'DepartmentStore', 'MarketPlace',
         'MarketHall', 'FursLeather', 'Shoes', 'InteriorDesign', 'SecondHand', 'Antiques', 'Outlet', 'Souvenirs', 'Jewellery',
         'Nature', 'Dance', 'History', 'Asian', 'RestaurantSummer', 'CafeSummer', 'Bed&Breakfast', 'MovieTheatre', 'AmusementPark',
-        'Animals', 'Sculpture', 'SkateBoard', 'GymFitness', 'Golf', 'MiniGolf', 'HorseRiding', 'Biking', 'EquipmentRental', 'Canoeing'].sort(function(a, b){
+        'Animals', 'Sculpture', 'SkateBoard', 'GymFitness', 'Golf', 'MiniGolf', 'HorseRiding', 'Biking', 'EquipmentRental', 'Canoeing'].sort(function(a, b){    // Places array
         if (a.toLowerCase() < b.toLowerCase()) return -1;
         if (a.toLowerCase() > b.toLowerCase()) return 1;
         return 0;
@@ -99,17 +99,17 @@ function settags() {
         'architecture', 'playgrounds', 'literature', 'art museums', 'motoring', 'education and training', 'light music',
         'sustainable development', 'basketball', 'running', 'crosscountry running', 'physical training', 'winter sports',
         'comedy (style)', 'standup comedy courses (societal objects)', 'track events', 'flea markets', 'urban culture',
-        'Ingrian identity', 'modern art', 'contemporary art', 'gymnastics', 'sports', 'mind and body'].sort(function(a, b){
+        'Ingrian identity', 'modern art', 'contemporary art', 'gymnastics', 'sports', 'mind and body'].sort(function(a, b){     // Events array
         if (a.toLowerCase() < b.toLowerCase()) return -1;
         if (a.toLowerCase() > b.toLowerCase()) return 1;
         return 0;
     });
-    
+    // Get all 3 tag lists (ul)
     const urls1 = document.getElementById("tags1");
     const urls2 = document.getElementById("tags2");
     const urls3 = document.getElementById("tags3");
-    console.log("Akt: " + akt.length + " Plc: " + plc.length + " Evt: " + evt.length);
-    for (let i = 0; i < akt.length; i++) {
+    console.log("Akt: " + akt.length + " Plc: " + plc.length + " Evt: " + evt.length); //debugging
+    for (let i = 0; i < akt.length; i++) {  //creates li element for each tag in the array
         const li = document.createElement("li");
         li.innerHTML = akt[i];
         urls1.appendChild(li);
@@ -126,12 +126,12 @@ function settags() {
     }
 }
 
-function on() {
+function on() {     // Shows the overlay and disables scrolling for the main site
     overlay.style.display = "block";
     body.className = "overlay_hidden";
 }
 
-function off() {
+function off() {    // Hides the overlay and enables scrolling for the main site
     overlay.style.display = "none";
     body.className = "overlay_show";
 }

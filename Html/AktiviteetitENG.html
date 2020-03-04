@@ -3,9 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Helsinki API</title>
+    <title>#etsiHelsingistä</title>
     <link rel="stylesheet" href="../Css/tyylit.css">
-
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
           integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
           crossorigin=""/>
@@ -18,7 +17,7 @@
     <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 </head>
 <body>
-
+<!-- Navbar -->
 <div class="navbar">
     <a href="Etusivu.html">Etusivu</a>
     <a href="Aktiviteetit.html" class='active-page'>Etsi kaupungista</a>
@@ -28,12 +27,12 @@
     <a href="">Dos and don'ts?</a>
     <a href="">Basic Phrases?</a>
     <a href="">Restaurants...?</a>
-    <a id="english" style="float: right;"></a>
-    <a id="finnish" href="Aktiviteetit.html" style="float: right; border-left: 1px solid #FFF;"></a>
+    <a id="english" style="float: right;"></a> <!-- English site -->
+    <a id="finnish" href="Aktiviteetit.html" style="float: right; border-left: 1px solid #FFF;"></a> <!-- Finnish site -->
 </div>
-
+<!-- Instruction overlay, that is hidden until correct button is pressed -->
 <div id="overlay">
-    <button id="putton"></button>
+    <button id="putton"></button> <!-- Closes/hides the overlay -->
     <h2 class="overH2">Search Engine instructions</h2>
     <ul>
         <li id="ohje1" class="overtext">In the list below, search for "tag" that matches the topic you are looking for (eg "beer" or "animals")</li>
@@ -42,6 +41,7 @@
         <li id="ohje4" class="overtext">Clear Map-button resets all searches and clears the map from markers</li>
         <li id="ohje5" class="overtext">Locate Me-button shows your location on the map</li>
     </ul>
+    <!-- Lists all tags in 3 columns -->
     <div class="row">
         <div class="column"; id="column">
             <h2 class="columnH2overtext">Activities</h2>
@@ -58,7 +58,7 @@
     </div>
 </div>
 <p id="paaotsikko">Search Helsinki</p>
-
+<!-- Search Engine input & buttons -->
 <input id="teksti" type="text" placeholder="Find...">
 <button id="nappi">Search for an activity</button>
 <button id="nappi2">Search for a location</button>
@@ -66,13 +66,13 @@
 <button id="nappi4">Clear map</button>
 <button id="nappi5">Locate me (SOS)</button>
 <button id="nappi6">Test navigation</button>
-<button id="nappi7">Instructions</button>
+<button id="nappi7">Instructions</button> <!-- Opens/reveals the overlay -->
 <br>
-<div id="kartta"></div>
-<script src="../Js/Aktiviteetit.js"></script>
-<script src="../Js/Paikat.js"></script>
-<script src="../Js/Eventit.js"></script>
-<script src="../Js/Overlay.js"></script>
+<div id="kartta"></div> <!-- The map window -->
+<script src="../Js/Aktiviteetit.js"></script> <!-- Activity search script -->
+<script src="../Js/Paikat.js"></script> <!-- Places search script -->
+<script src="../Js/Eventit.js"></script> <!-- Events search script -->
+<script src="../Js/Overlay.js"></script> <!-- Overlay show/hide script -->
 </div>
 </body>
 </html>

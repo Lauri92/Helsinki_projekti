@@ -254,12 +254,7 @@ function etsiAktiviteetit(evt) {
           div.appendChild(image);
           body.appendChild(div);
         }
-        // add stuff
-        if(i == vastaus.data.length - 1) {}
-        else {
-          const b = document.createElement("hr");
-          document.getElementsByTagName("body")[0].appendChild(b);
-        }
+
       }
     } else {
       const eiTuloksia = document.createElement('p');

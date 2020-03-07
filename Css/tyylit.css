@@ -272,7 +272,6 @@ button {
     padding-left: 1em;
     background-color: rgba(0,0,0,0.8); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
 }
 
 .overlay_hidden {
@@ -374,7 +373,10 @@ button {
 }
 
 #putton {
-    background-image: url("../Pictures/bird.png");
+    background-image: url("../Pictures/xtrans.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    cursor: pointer; /* Add a pointer on hover */
     width: 50px;
     height: 50px;
     margin-right: 1.8em;

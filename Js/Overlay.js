@@ -127,11 +127,11 @@ function settags() {    // Used to fill the tag lists (ul). Tags are manually ad
 }
 
 function on() {     // Shows the overlay and disables scrolling for the main site
-    overlay.style.display = "block";
+    document.getElementById('overlay').style.display = "block";
     body.className = "overlay_hidden";
 }
 
 function off() {    // Hides the overlay and enables scrolling for the main site
-    overlay.style.display = "none";
+    document.getElementById('overlay').style.display = "none";
     body.className = "overlay_show";
 }

@@ -30,34 +30,36 @@
     <a id="finnish" style="float: right; border-left: 1px solid #FFF;"></a>
 </div>
 
+<!-- Instruction overlay, that is hidden until correct button is pressed -->
 <div id="overlay">
-    <button id="putton"></button>
-    <h2 class="overH2">Hakukoneen käyttöohjeet (Paina hiirellä poistuaksesi overlaysta)</h2>
+    <button id="putton"></button> <!-- Closes/hides the overlay -->
+    <h2 class="overH2">Search Engine instructions</h2>
     <ul>
-        <li id="ohje1" class="overtext">Etsi alhaalla olevista listoista "tagi" joka sopii etsimääsi aiheeseen (Esim. "beer" tai "animals")</li>
-        <li id="ohje2" class="overtext">Paina etsimäsi aiheeseen littyvää oikeaa nappulaa (Hae aktiviteettia/paikkaa/tapahtumaa)</li>
-        <li id="ohje3" class="overtext">Hakukone hakee aiheeseesi liittyviä kohteita ja tulostaa sijainnnit kartalla, sekä tulostaa tietoa kartan alapuolelle</li>
-        <li id="ohje4" class="overtext">Tyhjennä kartta-nappula nollaa kaikki haut ja tyhjentää kartan markkereista</li>
-        <li id="ohje5" class="overtext">Paikanna minut-nappula näyttää sijantisi kartalla</li>
+        <li id="ohje1" class="overtext">In the list below, search for "tag" that matches the topic you are looking for (eg "beer" or "animals")</li>
+        <li id="ohje2" class="overtext">Press the right button for the topic you are looking for (Search activity / place / event)</li>
+        <li id="ohje3" class="overtext">The search engine will search for items related to your topic, print locations on the map, and print information below the map</li>
+        <li id="ohje4" class="overtext">Clear Map-button resets all searches and clears the map from markers</li>
+        <li id="ohje5" class="overtext">Locate Me-button shows your location on the map</li>
     </ul>
+    <!-- Lists all tags in 3 columns -->
     <div class="row">
         <div class="column"; id="column">
-            <h2 class="columnH2overtext">Aktiviteetit</h2>
+            <h2 class="columnH2overtext">Activities</h2>
             <ul id="tags1"></ul>
         </div>
         <div class="column"; id="column2">
-            <h2 class="columnH2overtext">Paikat</h2>
+            <h2 class="columnH2overtext">Places</h2>
             <ul id="tags2"></ul>
         </div>
         <div class="column"; id="column3">
-            <h2 class="columnH2overtext">Tapahtumat</h2>
+            <h2 class="columnH2overtext">Events</h2>
             <ul id="tags3"></ul>
         </div>
     </div>
 </div>
 <p id="paaotsikko">Search Helsinki</p>
 
-<input id="teksti" type="text" placeholder="Etsi...">
+<input id="teksti" type="text" placeholder="Search...">
 <button id="nappi">Search activities</button>
 <button id="nappi2">Search places</button>
 <button id="nappi3">Search events</button>
@@ -67,11 +69,19 @@
 <button id="nappi7">Manual</button>
 <br>
 <div id="kartta"></div>
+
 <script src="../Js/Aktiviteetit.js"></script>
 <script src="../Js/Paikat.js"></script>
 <script src="../Js/Eventit.js"></script>
 <script src="../Js/Overlay.js"></script>
-<script src="../Js/Aktiviteetit_translate.js"></script>
+
+<script>
+    document.getElementById('finnish').href = 'Aktiviteetit.html';
+    document.getElementById('english').href = 'Activities.html';
+</script>
+
+
+<!--<script src="../Js/Aktiviteetit_translate.js"></script>-->
 </div>
 </body>
 </html>

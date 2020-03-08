@@ -38,7 +38,7 @@ function navigointi(e) {
   L.Routing.control({
     waypoints: [
       L.latLng(kayttajanLat, kayttajanLon),
-      L.latLng(60.16941, 24.92589),
+      L.latLng(60.17067, 24.94149),
     ],
     routeWhileDragging: true,
   }).addTo(mymap);
@@ -215,13 +215,7 @@ function etsiAktiviteetit(evt) {
           selostus.innerHTML = 'Ei selostusta';
           selostus.className = 'selostus';
         }
-        /*console.log(
-            'Kuvien määrä: ' + vastaus.data[i].description.images.length);
 
-        if (vastaus.data[i].description.images[i] !== null) {
-          kuva.src = vastaus.data[i].description.images[0].url;
-          kuva.className = 'kuva';
-        }*/
 
         console.log('Where and when: ' +
             vastaus.data[i].where_when_duration.where_and_when);
@@ -263,6 +257,7 @@ function etsiAktiviteetit(evt) {
       document.querySelector('body').appendChild(eiTuloksia);
     }
   }
+  mymap.setView([60.20315, 24.94034], 12);
 }
 
 /*function navigointi(evt, arg1) {

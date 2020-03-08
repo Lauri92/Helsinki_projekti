@@ -2,6 +2,9 @@
 const finnnish = document.getElementById("finnish");
 const english = document.getElementById("english");
 const otsikko = document.getElementById("paaotsikko");
+
+
+
 finnnish.addEventListener("click", fin);
 english.addEventListener("click", eng);
 

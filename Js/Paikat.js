@@ -136,6 +136,7 @@ function etsiEventit(evt) {
       document.querySelector('body').appendChild(eiTuloksia);
     }
   }
+  mymap.setView([60.20315, 24.94034], 12);
 }
 
 

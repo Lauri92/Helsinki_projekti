@@ -120,8 +120,28 @@ function etsiEventit(evt) {
           image.className = 'kuva';
           image.setAttribute('src', vastaus.data[i].description.images[j].url);
           div.appendChild(image);
-          body.appendChild(div);
         }
+
+        const painike = document.createElement('button');
+        painike.addEventListener('click', (e) => {
+          document.documentElement.scrollTop = 175;
+          L.Routing.control({
+            waypoints: [
+              L.latLng(kayttajanLat, kayttajanLon),
+              L.latLng(lat, lon),
+            ],
+            routeWhileDragging: false,
+          }).addTo(mymap);
+        });
+
+        div.appendChild(painike);
+        body.appendChild(div);
+
+
+
+
+
+
         const c = document.createElement("hr");
         if(i == vastaus.data.length - 1) {}
         else {

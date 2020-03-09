@@ -95,6 +95,10 @@ body {
     margin-bottom: 1.4em;
 }
 
+.infodiv5:not(:last-child) {
+    margin-bottom: 1.4em;
+}
+
 .infodiv3:not(:last-child) {
     margin-bottom: 1.4em;
 }

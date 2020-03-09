@@ -64,7 +64,7 @@ body {
     margin-top: 1.4em;
     margin-left: 1.4em;
     opacity: 77%;
-    background-image: url("../html/kuvat/tausta2.png");
+    background-color: #e1e1e1;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -115,7 +115,7 @@ body {
     margin-top: 1.4em;
     margin-left: 1.4em;
     opacity: 85%;
-    background-image: url("../html/kuvat/tausta2.png");
+    background-color: #e1e1e1;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -543,7 +543,7 @@ span {
     padding-bottom: 0.5em;
     text-align: center;
     opacity: 75%;
-    background-image: url("../html/kuvat/tausta2.png");
+    background-color: #e1e1e1;
     border-radius: 15px;
 }
 

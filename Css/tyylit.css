@@ -64,7 +64,7 @@ body {
     margin-top: 1.4em;
     margin-left: 1.4em;
     opacity: 77%;
-    background-image: url("../html/kuvat/tausta2.png");
+    background-color: #e1e1e1;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -115,7 +115,7 @@ body {
     margin-top: 1.4em;
     margin-left: 1.4em;
     opacity: 85%;
-    background-image: url("../html/kuvat/tausta2.png");
+    background-color: #e1e1e1;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -137,6 +137,24 @@ body {
     margin-top: 1.4em;
     margin-left: 1.4em;
     background-image: url("../Pictures/red-blurred-background.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.infodiv6 {
+    font-weight: 500;
+    width: 350px;
+    border-radius: 15px;
+    padding: 20px;
+    overflow: hidden;
+    margin-top: 1.4em;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 85%;
+    background-color: #e1e1e1;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -543,15 +561,18 @@ span {
     padding-bottom: 0.5em;
     text-align: center;
     opacity: 75%;
-    background-image: url("../html/kuvat/tausta2.png");
+    background-color: #e1e1e1;
     border-radius: 15px;
 }
 
 .introvid {
-    margin-left: 2em;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
     margin-bottom: 1em;
     margin-top: 2em;
+    width: 1280px;
+    height: 720px;
 }
 /*
 .kuvalinkki2{

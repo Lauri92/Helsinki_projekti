@@ -17,10 +17,11 @@
 }
 
 html {
-    background-color: white;
+    height: 100%;
 }
 
 body {
+    height: 100%;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;

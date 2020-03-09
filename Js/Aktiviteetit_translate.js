@@ -1,4 +1,4 @@
-//  Start of the script
+//  Start of the script - abandoned stuff
 const finnnish = document.getElementById("finnish");
 const english = document.getElementById("english");
 const otsikko = document.getElementById("paaotsikko");

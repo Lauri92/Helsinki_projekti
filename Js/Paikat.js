@@ -75,7 +75,7 @@ function etsiEventit(evt) {
                 lat + ' ' + lon,
             );
 
-        div.className = 'infodiv2';
+        div.className = 'infodiv5';
 
         nimi.innerHTML = vastaus.data[i].name.fi;
         nimi.className = 'nimi';
@@ -121,8 +121,29 @@ function etsiEventit(evt) {
           image.className = 'kuva';
           image.setAttribute('src', vastaus.data[i].description.images[j].url);
           div.appendChild(image);
-          body.appendChild(div);
         }
+
+        const painike = document.createElement('button');
+        painike.addEventListener('click', (e) => {
+          document.documentElement.scrollTop = 175;
+          L.Routing.control({
+            waypoints: [
+              L.latLng(kayttajanLat, kayttajanLon),
+              L.latLng(lat, lon),
+            ],
+            routeWhileDragging: false,
+          }).addTo(mymap);
+        });
+
+        div.appendChild(painike);
+        body.appendChild(div);
+
+
+
+
+
+
+
         if(i == vastaus.data.length - 1) {}
         else {
           const b = document.createElement("hr");

@@ -124,6 +124,7 @@ function etsiEventit(evt) {
         }
 
         const painike = document.createElement('button');
+        painike.className = 'navPainike';
         painike.addEventListener('click', (e) => {
           document.documentElement.scrollTop = 175;
           L.Routing.control({

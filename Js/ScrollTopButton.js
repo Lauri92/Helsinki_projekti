@@ -1,11 +1,11 @@
 // Start of the script
-var mybutton = document.getElementById("myBtn");
+var topbutton = document.getElementById("myBtn");
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-        mybutton.style.display = "block";
+        topbutton.style.display = "block";
     } else {
-        mybutton.style.display = "none";
+        topbutton.style.display = "none";
     }
 }
 function topFunction() {

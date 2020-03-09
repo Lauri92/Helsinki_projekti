@@ -1,6 +1,5 @@
 'use strict';
 
-
 const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors ';
 //const kirkkoattribution = '&copy; <a href="https://pixabay.com/fi/users/tap5a-12431592/">Pixabay</a> contributors ';
@@ -40,7 +39,7 @@ function navigointi(e) {
       L.latLng(kayttajanLat, kayttajanLon),
       L.latLng(60.17067, 24.94149),
     ],
-    routeWhileDragging: true,
+    routeWhileDragging: false,
   }).addTo(mymap);
 }
 
@@ -142,7 +141,7 @@ function etsiAktiviteetit(evt) {
     if (vastaus.data.length > 0) {
       const body = document.querySelector('body');
       const osumat = document.createElement('p');
-      const a = document.createElement("hr");
+      const a = document.createElement('hr');
       body.appendChild(a);
       osumat.className = 'tulokset';
       osumat.innerHTML = 'Hakusanalla löytyi ' + vastaus.meta.count +
@@ -216,7 +215,6 @@ function etsiAktiviteetit(evt) {
           selostus.className = 'selostus';
         }
 
-
         console.log('Where and when: ' +
             vastaus.data[i].where_when_duration.where_and_when);
         if (vastaus.data[i].where_when_duration.where_and_when !== null ||
@@ -246,10 +244,24 @@ function etsiAktiviteetit(evt) {
           image.className = 'kuva';
           image.setAttribute('src', vastaus.data[i].description.images[j].url);
           div.appendChild(image);
-          body.appendChild(div);
-        }
 
+        }
+        const painike = document.createElement('button');
+        painike.addEventListener('click', (e) => {
+          document.documentElement.scrollTop = 175;
+          L.Routing.control({
+            waypoints: [
+              L.latLng(kayttajanLat, kayttajanLon),
+              L.latLng(lat, lon),
+            ],
+            routeWhileDragging: false,
+          }).addTo(mymap);
+        });
+
+        div.appendChild(painike);
+        body.appendChild(div);
       }
+
     } else {
       const eiTuloksia = document.createElement('p');
       eiTuloksia.innerHTML = 'Ei tuloksia';
@@ -257,14 +269,12 @@ function etsiAktiviteetit(evt) {
       document.querySelector('body').appendChild(eiTuloksia);
     }
   }
+
   mymap.setView([60.20315, 24.94034], 12);
 }
 
-/*function navigointi(evt, arg1) {
-  console.log('"Navigoi painettu."' + arg1);
-  console.log(kayttajanLat, kayttajanLon);
 
-}*/
+kayttajanPaikannus();
 
 
 

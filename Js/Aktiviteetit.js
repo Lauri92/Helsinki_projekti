@@ -226,7 +226,7 @@ function etsiAktiviteetit(evt) {
           missa.className = 'missa';
         }
 
-        body.appendChild(div);
+        //body.appendChild(div);
         div.appendChild(nimi);
         //div.appendChild(kuva);
         div.appendChild(selostus);

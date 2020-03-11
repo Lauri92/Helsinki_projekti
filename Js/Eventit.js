@@ -70,9 +70,7 @@ function etsiEventit(evt) {
             bindPopup(vastaus.data[i].name.fi + '<br>' +
                 vastaus.data[i].location.address.street_address + '<br>' +
                 '<a href="' + vastaus.data[i].info_url +
-                '">Web-sivut</a>' + '<br>' +
-                '<button onclick="navigointi(lat)">Navigoi</button>' + '<br>' +
-                lat + ' ' + lon,
+                '">Web-sivut</a>' + '<br>'
             );
 
         div.className = 'infodiv3';

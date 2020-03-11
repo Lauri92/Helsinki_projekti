@@ -1,11 +1,9 @@
 'use strict';
 
+//Luodaan kartta
 const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors ';
-//const kirkkoattribution = '&copy; <a href="https://pixabay.com/fi/users/tap5a-12431592/">Pixabay</a> contributors ';
-
 const mymap = L.map('kartta').setView([60.20315, 24.94034], 12);
-
 const tiles = L.tileLayer(tileUrl, {attribution});
 tiles.addTo(mymap);
 
@@ -27,13 +25,14 @@ nappi5.addEventListener('click', kayttajanPaikannus);
 const nappi6 = document.getElementById('nappi6');
 nappi6.addEventListener('click', navigointi);
 
+//Muuttujat käyttäjän sijainnille
 let kayttajanLat;
 let kayttajanLon;
 let kayttajanSijainti;
 
-function navigointi(e) {
-  const painettu = document.getElementsByClassName('lisattypop');
 
+//Navigointi valittuun kohteeseen
+function navigointi(e) {
   L.Routing.control({
     waypoints: [
       L.latLng(kayttajanLat, kayttajanLon),
@@ -43,13 +42,9 @@ function navigointi(e) {
   }).addTo(mymap);
 }
 
-function asetaLon(pos) {
-  console.log('Nappi 4: Testataanpas lon: ' + kayttajanLon + '<br>' +
-      'Testataanpas lat: ' + kayttajanLat);
-}
 
+//Kun karttaa klikataan
 function onMapClick(e) {
-  //alert("You clicked the map at " + e.latlng);
   console.log(e.latlng);
   const popup = L.popup().
       setLatLng(e.latlng).
@@ -65,6 +60,8 @@ const options = {
   maximumAge: 0,
 };
 
+
+//Käyttäjän paikannus
 function kayttajanPaikannus(evt) {
 
   navigator.geolocation.getCurrentPosition(success, error, options);
@@ -81,6 +78,7 @@ function kayttajanPaikannus(evt) {
     console.log(`Longitude: ${crd.longitude}`);
     console.log(`More or less ${crd.accuracy} meters.`);
 
+    //Luodaan ikoni käyttäjän sijainnille
     const ikoni = L.icon({
       iconUrl: '../Pictures/bird.png',
       //shadowUrl: 'leaf-shadow.png',
@@ -91,31 +89,37 @@ function kayttajanPaikannus(evt) {
       //popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
     });
 
+    //Lisätään ikoni kartalle
     kayttajanSijainti = L.marker([crd.latitude, crd.longitude],
         {icon: ikoni}).
         addTo(mymap).
         bindPopup(
-            'I am here' + '<br>' +
+            'Täällä ollaan' + '<br>' +
             '<img src="http://placekitten.com/200/300">',
         );
 
+    //Asetetaan käyttäjän koordinaatit
     kayttajanSijainti.setLatLng([crd.latitude, crd.longitude]);
     mymap.setView([crd.latitude, crd.longitude], 13);
 
   }
 
-  // Funktio, joka ajetaan, jos paikkatietojen hakemisessa tapahtuu virhe
+  //Jos käyttäjän paikantamisessa tapahtuu virhe
   function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
   }
 
 }
 
+//Ladataan sivu uudelleen
 function clearaus(evt) {
   window.location.reload();
 }
 
+
+//Etsitään aktiviteetit
 function etsiAktiviteetit(evt) {
+  //Paikallistetaan ensin käyttäjä
   navigator.geolocation.getCurrentPosition(success);
 
   function success(pos) {
@@ -136,6 +140,7 @@ function etsiAktiviteetit(evt) {
     console.log(error);                                     // kirjoitetaan virhe konsoliin.
   });
 
+  //Luodaan elementit haulla löytyneille tiedoille
   function naytaTiedot(vastaus) {
     console.log(vastaus);
     if (vastaus.data.length > 0) {
@@ -165,6 +170,8 @@ function etsiAktiviteetit(evt) {
         console.log(vastaus.data[i].location.address.street_address);
         console.log(vastaus.data[i].name.fi);
 
+
+        //Luodaan löytyneille aktiviteeteille ikoni
         const ikoni = L.icon({
           iconUrl: '../Pictures/bluemarker.png',
           //shadowUrl: 'leaf-shadow.png',
@@ -175,14 +182,13 @@ function etsiAktiviteetit(evt) {
           //popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
         });
 
+        //Lisätään merkki karttaan jokaiselle löytyneelle kohteelle
         const merkki = L.marker([lat, lon], {icon: ikoni}).
             addTo(mymap).
             bindPopup(vastaus.data[i].name.fi + '<br>' +
                 vastaus.data[i].location.address.street_address + '<br>' +
                 '<a href="' + vastaus.data[i].info_url +
-                '">Web-sivut</a>' + '<br>' +
-                '<button onclick="navigointi(lat)">Navigoi</button>' + '<br>' +
-                lat + ' ' + lon,
+                '">Web-sivut</a>'
             );
 
         div.className = 'infodiv';
@@ -226,9 +232,7 @@ function etsiAktiviteetit(evt) {
           missa.className = 'missa';
         }
 
-        //body.appendChild(div);
         div.appendChild(nimi);
-        //div.appendChild(kuva);
         div.appendChild(selostus);
         div.appendChild(missa);
         div.appendChild(osoite);
@@ -246,6 +250,8 @@ function etsiAktiviteetit(evt) {
           div.appendChild(image);
 
         }
+
+        //Luodaan nappula kohteeseen navigointia varten, (jostain syystä ei aina toimi.....) Edgellä pitäisi toimia
         const painike = document.createElement('button');
         painike.className = 'navPainike';
         painike.textContent = "Navigoi kohteeseen";
@@ -264,6 +270,7 @@ function etsiAktiviteetit(evt) {
         body.appendChild(div);
       }
 
+      //Jos osumia haulle ei löydy
     } else {
       const eiTuloksia = document.createElement('p');
       eiTuloksia.innerHTML = 'Ei tuloksia';

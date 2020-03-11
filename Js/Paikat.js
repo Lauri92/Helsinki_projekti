@@ -1,5 +1,7 @@
 'use strict';
 
+
+//SAMAT KOMMENTIT KUIN Aktiviteetit.js
 const apiUrl2 = 'https://cors-anywhere.herokuapp.com/http://open-api.myhelsinki.fi/v1/places/?tags_search=';
 
 const nappi2 = document.getElementById('nappi2');
@@ -70,9 +72,7 @@ function etsiEventit(evt) {
             bindPopup(vastaus.data[i].name.fi + '<br>' +
                 vastaus.data[i].location.address.street_address + '<br>' +
                 '<a href="' + vastaus.data[i].info_url +
-                '">Web-sivut</a>' + '<br>' +
-                '<button onclick="navigointi(lat)">Navigoi</button>' + '<br>' +
-                lat + ' ' + lon,
+                '">Web-sivut</a>' + '<br>'
             );
 
         div.className = 'infodiv5';
@@ -140,10 +140,6 @@ function etsiEventit(evt) {
 
         div.appendChild(painike);
         body.appendChild(div);
-
-
-
-
 
 
 

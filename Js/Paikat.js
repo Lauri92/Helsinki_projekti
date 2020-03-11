@@ -1,5 +1,7 @@
 'use strict';
 
+
+//SAMAT KOMMENTIT KUIN Aktiviteetit.js
 const apiUrl2 = 'https://cors-anywhere.herokuapp.com/http://open-api.myhelsinki.fi/v1/places/?tags_search=';
 
 const nappi2 = document.getElementById('nappi2');
